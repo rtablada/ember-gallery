@@ -3,9 +3,15 @@
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp({
+  trees: {
+    vendor: 'lib/bower',
+    app: 'assets/ember/app',
+    styles: 'assets/ember/app/styles',
+    tests: 'assets/ember/tests'
+  },
   name: require('./package.json').name,
 
-  getEnvJSON: require('./config/environment')
+  getEnvJSON: require('./assets/ember/config/environment')
 });
 
 // Use this to add additional libraries to the generated output files.
