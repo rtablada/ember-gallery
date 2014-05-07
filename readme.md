@@ -1,24 +1,41 @@
-## Laravel PHP Framework
+# Ember Gallery
 
-[![Build Status](https://img.shields.io/travis/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel/framework.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Version](https://img.shields.io/github/tag/laravel/framework.svg)](https://github.com/laravel/framework/releases)
-[![Dependency Status](https://www.versioneye.com/php/laravel:framework/badge.svg)](https://www.versioneye.com/php/laravel:framework)
+Ember gallery is a simple example artist portfolio CMS built using Ember CLI and Laravel PHP.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+The idea is to have a sandbox to play with ideas and strategies to make an easy path and a community example of how to use these two technologies together.
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+## Reusable Code Refactoring
 
-## Official Documentation
+As many applications have similar components, I hope that this project will give myself and the community the opprotunity to refactor and bulid reusable packages (composer, npm, and bower) to help accomplish some of the pain points that exist in creating authenticated CMS applications (and so on).
+Some things I already hope to refactor out of this project as it grows:
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
+- Laravel authentication token package (support for server side time out and multiple user sessions)
+- Ember authentication controllers to manage token based auth (changes authentication headers on AJAX requests too)
+- Laravel API controllers with configurable Serialization/Normalization (may work with Dingo/API)
 
-### Contributing To Laravel
+## Installation
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+The Laravel portion of this application is rather simple to get working if you have Vagrant installed, just run:
 
-### License
+```
+vagrant up
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+You can then access the Laravel API server on your local machine using `192.168.33.10.xip.io`.
+
+The ember side of things is not quite as simple since this project using the active master branch of Ember-CLI (at least it does when I'm writing this).
+In another directory run:
+
+```
+git clone https://github.com/stefanpenner/ember-cli.git
+cd ember-cli
+npm link
+```
+
+Then come back to this project and run:
+
+```
+npm link ember-cli
+ember server
+```
