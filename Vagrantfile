@@ -20,9 +20,9 @@ server_timezone       = "UTC"
 
 # Database Configuration
 pgsql_root_password   = "root"   # We'll assume user "root"
-pgsql_database_name   = "ember-gallery"
-pgsql_user            = "ember-gallery"
-pgsql_pass            = "ember-gallery"
+pgsql_database_name   = "ember_gallery"
+pgsql_user            = "ember_gallery"
+pgsql_pass            = "ember_gallery"
 
 # Languages and Packages
 ruby_version          = "latest" # Choose what ruby version should be installed (will also be the default version)
