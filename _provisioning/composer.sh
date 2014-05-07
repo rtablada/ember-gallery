@@ -17,4 +17,3 @@ sudo chmod -R 777 /vagrant/app/storage
 sudo chmod -R 777 /vagrant/public/system
 
 php /vagrant/artisan migrate --seed
-php -d memory_limit=1512M /vagrant/artisan db:seed --class="TestData\DatabaseSeeder"
