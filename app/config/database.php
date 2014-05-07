@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'default' => 'mysql',
+	'default' => 'pgsql',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -66,9 +66,9 @@ return array(
 		'pgsql' => array(
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',
-			'database' => 'database',
-			'username' => 'root',
-			'password' => '',
+			'database' => 'ember_gallery',
+			'username' => 'ember_gallery',
+			'password' => 'ember_gallery',
 			'charset'  => 'utf8',
 			'prefix'   => '',
 			'schema'   => 'public',
